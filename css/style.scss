@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+$pink: #F16D7F;
+$almostBlack: #222222;
+$darkGrey: #222224;
+$black: #000000;
+$lightGrey: #575757;
+$categoryWidth: 360px * 100% / 1140px;
+$headerHeight: 75px;
+$promoHeight: 764px;
+
+@mixin flexAllCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fontDetails ($weight: normal, $size: 13px, $height: 16px) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin defaultField {
+    font-family: inherit;
+    padding: 13px 0 16px 17.24px;
+    width: 360px;
+    color: #222222;
+    outline: none;
+    border: none;
+    outline: 1px solid #A4A4A4;
+    @include fontDetails (300, 13px, 16px);
+
+    &:hover,
+    &:focus {
+        outline-color: $black;
+    }
+
+    &::placeholder {
+        font-family: inherit;
+        @include fontDetails (300, 13px, 16px);
+        color: #B1B1B1;
+    }
+}
+
+@mixin header-replace {
+    padding-top: 75px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', Arial, sans-serif;
+    position: relative;
+}
+
+.wrap {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -999999px;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+/* Header Start */
+
+@import "blocks/header";
+
+@import "blocks/search-field";
+
+/* Header End */
+
+/* Promo Start */
+
+@import "blocks/promo";
+
+/* Promo End */
+
+/* Category Start */
+
+@import "blocks/categories";
+
+/* Category End */
+
+/* Featured Start */
+
+/* Эта библиотека также содержит стили для размещения товаров на странице (например каталог или нижняя часть страницы товара) */
+
+@import "blocks/featured-items";
+
+/* Featured End */
+
+/* Item Overlay Start*/
+
+/* moved to blocks/featured-items.scss */
+
+/* Item Overlay End*/
+
+/* Shop Features Start */
+
+@import "blocks/shop-features";
+
+/* Shop features End */
+
+/* Feedback Start */
+
+@import "blocks/feedback";
+
+/* Feedback End */
+
+/* Footer Start */
+
+@import "blocks/footer";
+
+/* Footer End */
+
+/* Catalog Page Start */
+
+/* Catalog Header Start */
+
+@import "blocks/catalog";
+
+/* Catalog Main End */
+
+/* Catalog Page End*/
+
+/* Product Page Start */
+
+@import "blocks/product-page";
+
+/* Product Page End */
+
+/* Cart Page Start */
+
+@import "blocks/cart";
+
+/* Cart Page End */
+
+/* Registration Page Start */
+
+@import "blocks/registration";
+
+/* Registration Page End */
+
+@import "blocks/burger-menu";
+
+/* @MEDIA START*/
+
+@import "blocks/media";
+
+/* @MEDIA END */

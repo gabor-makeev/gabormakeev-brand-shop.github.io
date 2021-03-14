@@ -1,0 +1,116 @@
+.feedback {
+    display: flex;
+    min-height: 448px;
+    margin: 0 auto;
+    background: url(../img/feedback_background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #E5E5E5;
+
+    &-position {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &:hover .review {
+        transform: scale(1.1) translate(10px, -10px);
+    }
+
+    &:hover .feedback-subscribe-form {
+        transform: scale(1.1) translate(-10px, -10px);
+    }
+}
+
+.review {
+    max-width: 360px;
+    height: 225px;
+    text-align: center;
+    transition: 0.3s;
+    margin-top: -29px;
+
+    & img {
+        margin-left: -18px;
+    }
+
+    & p {
+        font-family: inherit;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: $darkGrey;
+        margin-top: 30px;
+    }
+    
+    & p span {
+        font-style: italic;
+    }
+}
+
+.feedback-subscribe-form {
+    margin-right: 100px;
+    margin-top: -5px;
+    transition: 0.3s;
+
+    & h2 {
+        text-align: center;
+        @include fontDetails(bold, 24px, 167.2%);
+        color: $darkGrey;
+        margin: 0;
+    }
+    
+    & p {
+        @include fontDetails(normal, 18px, 167.2%);
+        text-align: center;
+        color: $darkGrey;
+        margin: -5px 0 30px 0;
+        font-style: normal;
+    }
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: row;
+}
+
+.feedback-email {
+    border: none;
+    max-width: 256px;
+    height: 49px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 7px 64px 6px 22px;
+    background-color: #E1E1E1;
+
+    &:hover {
+        background-color: #dbdbdb;
+    }
+    
+    &:focus {
+        outline: none;
+        background-color: #ccc;
+    }
+}
+
+.subscribe-button {
+    border: none;
+    width: 100px;
+    height: 49px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: $pink;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    font-family: inherit;
+
+    &:hover {
+        background-color: #f56074;
+        cursor: pointer;
+    }
+    
+    &:focus {
+        outline: none;
+        background-color: #f55066;    
+    }
+}

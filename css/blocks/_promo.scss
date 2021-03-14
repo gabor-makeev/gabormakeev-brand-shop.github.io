@@ -1,0 +1,41 @@
+.promo {
+    background-color: #F1E4E6;
+    min-height: 764px;
+    @include header-replace;
+
+    &-position {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &-img {
+        height: 764px;
+        width: 608px;
+        background: url(../img/promo_img.png) no-repeat;
+        margin-left: -226px;
+    }
+
+    &-title {
+        margin: 290px 105px 0 0;
+        padding-left: 16px;
+        border-left: 12px solid $pink;
+        height: 92px;
+    }
+
+    &-title h2 {
+        @include fontDetails(bold, 32px, 38px);
+        color: $almostBlack;
+        margin: 0;
+    }
+
+    &-title .promo-t1 {
+        @include fontDetails(900, 48px, 58px);
+    }
+    
+    &-title .promo-t2 {
+        font-weight: bold;
+        color: $pink;
+    }
+}

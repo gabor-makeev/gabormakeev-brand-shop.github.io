@@ -1,0 +1,22 @@
+.search-field {
+    width: 0;
+    border: none;
+    padding: 0;
+    transition: 0.5s;
+    height: 34px;
+    margin-right: 10px;
+    outline: none;
+}
+
+#search {
+    display: none;
+}
+
+#search:checked ~ .search-field {
+    width: 100%;
+    border: 1px solid white;
+    background-color: #F1E4E6;
+    border-radius: 50px;
+    display: block;
+    padding: 0 15px;
+}

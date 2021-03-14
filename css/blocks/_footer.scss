@@ -1,0 +1,45 @@
+.footer {
+    min-height: 79px;
+    display: flex;
+    background-color: $darkGrey;
+
+    &-position {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-copyright {
+        font-size: 16px;
+        line-height: 19px;
+        color: #FBFBFB;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -7px;
+}
+
+.social-link {
+    @include flexAllCenter;
+    width: 31.45px;
+    height: 32px;
+    background-color: #fff;
+    color: $black;
+    margin-right: 7.29px;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: $pink;
+        color: #fff;
+        transform: scale(1.05);
+    }
+    
+    &:focus {
+        background-color: #ec4f64;
+    }
+}

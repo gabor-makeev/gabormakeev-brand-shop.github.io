@@ -1,0 +1,155 @@
+.registration-content {
+    padding: 64px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration {
+    display: flex;
+    flex-direction: column;
+
+    &-username-label {
+        @include fontDetails (300, 16px, 19px);
+        color: $almostBlack;
+        margin: 0 0 20px 0;
+    }
+
+    &-username {
+        text-transform: capitalize;
+        margin: 0 0 20px 0;
+        @include defaultField;
+
+    }
+
+    &-sex {
+        margin: 11px 0 0 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &-radio {
+            width: 16px;
+            height: 16px;
+            border: 1px solid #A4A4A4;
+            margin: 0 10px 0 0; 
+
+            &:hover {
+                border-color: $black;
+            }
+        }
+
+        &-label {
+            @include fontDetails (300, 11px, 13px);
+            color: #000000;
+            margin: 0 20px 0 0;
+        }
+    }
+
+    &-email-label {
+        @include fontDetails (300, 16px, 19px);
+        color: $almostBlack;
+        margin: 33px 0 20px 0;
+        width: 86px;
+    }
+
+    &-email {
+        @include defaultField;
+        margin: 0 0 20px 0;
+    }
+
+    &-password {
+        @include defaultField;
+        margin: 0 0 15px 0;
+    }
+
+    &-password-hint {
+        width: 359px;
+        margin: 0 0 39px 0;
+        @include fontDetails (300, 13px, 16px);
+        color: #B1B1B1;
+    }
+
+    &-submit {
+
+        width: 167px;
+        height: 50px;
+        background-color: $pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 96px 0;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &-input {
+            border: none;
+            outline:none;
+            background-color: transparent;
+            padding: 0;
+            margin: 0 20px 0 0;
+            @include fontDetails (normal, 14px, 17px);
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: #f56074;
+            transform: scale(1.025);
+        }
+
+        &-svg {
+            transition: 0.2s;
+        }
+
+        &:hover > .registration-submit-svg {
+            animation: arrowTwist 0.8s linear infinite both;
+        }
+
+    }
+}
+
+@keyframes arrowTwist {
+    0% {
+        transform: scale(1) rotateX(0deg);
+    }
+
+    50% {
+        transform: scale(1.4) rotateX(180deg);
+    }
+    
+    100% {
+        transform: scale(1) rotateX(360deg);
+    }
+}
+
+.membership-description {
+    width: 627px;
+    @include fontDetails (300, 24px, 29px);
+    color: $black;
+    margin-right: 25px;
+
+    &-title {
+        width: 265px;
+    }
+
+    &-text {
+        margin: 22px 0 0 0;
+    }
+
+    &-list {
+        margin: 22px 0 0 0;
+        list-style-type: none;
+        padding: 0 0 0 0;
+
+        & > li {
+            margin: 0 0 16px 0;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-item {
+        margin: 0 0 0 22px;
+    }
+
+}

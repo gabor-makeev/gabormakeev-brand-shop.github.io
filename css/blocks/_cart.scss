@@ -1,0 +1,230 @@
+.cart-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 96px 0 128px 0;
+}
+
+/* Left side of the page */
+
+.cart-content-items {
+    width: 652px;
+}
+
+.item-card {
+    display: flex;
+    width: 652px;
+    min-height: 306px;
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &-img {
+        width: 262px;
+        height: 306px;
+    }
+
+    &-details {
+        display: flex;
+        flex-direction: column;
+        width: 262px;
+        margin: 22px 57px 62px 31px;
+        @include fontDetails (normal, 22px, 26px);
+        color: $lightGrey;
+    }
+
+    &-close {
+        border-radius: 0;
+        border: none;
+        background-color: #fff;
+        padding: 0;
+        height: 18px;
+        margin: 28px 22px 0 0;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+.item-card-title {
+    @include fontDetails (normal, 24px, 29px);
+    color: $almostBlack;
+    margin: 0 0 42px 0;
+}
+
+.item-card-detail {
+    margin-bottom: 3px;
+}
+
+.item-card-price {
+    color: #EF5B70;
+}
+
+.item-card-parameters {
+    color: #6F6E6E;
+}
+
+.item-quantity {
+    width: 43px;
+    height: 24px;
+    margin-left: 24px;
+    border: 1px solid #EAEAEA;
+    font-family: inherit;
+    @include fontDetails (normal, 18px, 22px);
+    color: #656565;
+    transition: 0.3s;
+    outline: none;
+
+    &:hover {
+        border-color: black;
+    }
+}
+
+.item-card-svg {
+    transition: 0.2s;
+}
+
+.item-card-svg:hover {
+    fill: black;
+    transform: rotate(360deg);
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: 0.1s;
+}
+
+.cart-btn {
+    display: flex;
+    justify-content: space-between;
+
+    &-all {
+        border: 1px solid #A4A4A4;
+        border-radius: 0;
+        outline: none;
+        margin-top: 32px;
+        cursor: pointer;
+        background-color: #fff;
+        text-decoration: none;
+        font-family: inherit;
+        @include fontDetails(300, 14px, 17px);
+        color: $black;
+        padding: 17px 41px 16px 39px;
+        transition: 0.2s;
+
+        &:hover {
+            border-color: black;
+        }
+    }
+}
+
+/* Right side of the page */
+
+.cart-content-checkoutbox {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
+.shipping-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 272px;
+    margin-bottom: 57px;
+
+    &-title {
+        @include fontDetails (300, 16px, 19px);
+        color: #222222;
+        margin: 15px 0 0 0;
+    }
+
+    &-field {
+        font-family: inherit;
+        @include fontDetails (300, 13px, 16px);
+        color: #222222;
+        border: 1px solid #A4A4A4;
+        width: 359px;
+        height: 44px;
+        padding-left: 17px;
+        outline: none;
+        transition: 0.2s;
+
+        &:hover {
+            border-color: black;
+        }
+
+        &::placeholder {
+            font-family: inherit;
+            @include fontDetails (300, 13px, 16px);
+            color: #B1B1B1;
+        }
+    }
+
+    &-button {
+        width: 100px;
+        height: 34px;
+        margin-top: 3px;
+        @include fontDetails (300, 11px, 13px);
+        color: #4A4A4A;
+        border: 1px solid #A4A4A4;
+        background-color: #fff;
+        transition: 0.2s;
+        outline: none;
+
+        &:hover {
+            border-color: black;
+        }
+    }
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 360px;
+    min-height: 214px;
+    background-color: #F5F3F3;
+
+    &-sub {
+        @include fontDetails (normal, 11px, 13px);
+        color: #4A4A4A;
+        margin: 39px 34px 12px 0;
+    }
+
+    &-grand {
+        @include fontDetails (300, 16px, 19px);
+        color: #222222;
+        margin: 0 37px 21px 0;
+    }
+
+    &-btn {
+        @include fontDetails (300, 16px, 19px);
+        background-color: $pink;
+        border: none;
+        cursor: pointer;
+        width: 273px;
+        height: 50px;
+        margin: 0 43px 0 0;
+        color: #FFFFFF;
+        font-family: inherit;
+        outline: none;
+
+        &:hover {
+            background-color: #f56074;
+        }
+    }
+}
+
+.sub-price,
+.grand-price {
+    margin-left: 26px;
+}
+
+.grand-price {
+    color: $pink;
+    @include fontDetails (bold, 16px, 19px);
+}
+
+.grand-price-hr {
+    width: 275px;
+    height: 1px;
+    border: none;
+    background-color: #E2E2E2;
+    margin: 0 42px 17px 0;
+}

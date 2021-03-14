@@ -1,0 +1,263 @@
+.catalog-header {
+    background-color: #F8F3F4;
+    min-height: 223px;
+    display: flex;
+    @include header-replace;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.catalog-h2 {
+    display: flex;
+    margin: 0;
+    @include fontDetails(400, 24px, 29px);
+    color: $pink;
+}
+
+.breadcrumbs,
+.breadcrumbs a {
+    text-decoration: none;
+    font-style: normal;
+    @include fontDetails(300, 14px, 17px);
+    color: #636363;
+
+    &-previous:hover {
+        color: black;
+    }
+}
+
+.breadcrumbs .breadcrumbs-actual {
+    @include fontDetails(bold, 14px, 17px);
+    color: $pink;
+
+    &:hover {
+        color: #ec344c;
+    }
+}
+
+/* Catalog Header End */
+
+/* Catalog Main Start */
+
+.filters-wrap {
+    display: flex;
+    padding: 51px 0 64px 0;
+}
+
+.filter-button {
+    margin-right: 320px;
+    text-decoration: none;
+    @include fontDetails(600, 14px, 17px);
+    color: $black;
+    cursor: pointer;
+
+    &-svg {
+        margin-left: 11px;
+    }
+}
+
+.filter-button-active {
+    color: #EF5B70;
+    cursor: pointer;
+}
+
+/* Filter's content Start */
+
+.filter {
+    position: relative;
+    width: 393px;
+
+    &-trigger {
+        display: none;
+    }
+
+    &-button {
+
+        &:hover {
+            color: $pink;
+            fill: $pink;   
+        }
+    }
+
+    .filter-button:hover .filter-button-svg {
+        fill: $pink;
+    }
+
+    &-content {
+        position: absolute;
+        z-index: 1;
+        background-color: #fff;
+        padding: 14px 15.5px 0 17px;
+        width: 360px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        margin: -30px 0 0 -16px;
+        transition: 0.025s;
+    }
+
+    &-element-radio {
+        display: none;
+    }
+
+    &-element {
+        margin: 16px 0 24px 0;
+        padding: 8px 0 12px 11px;
+        border-left: 5px solid #EF5B70;
+        border-bottom: 1px solid #EBEBEB;
+        display: block;
+        cursor: pointer;
+    }
+
+    &-element-content {
+        list-style-type: none;
+        padding: 0;
+        margin: 24px 0 24px 16px;
+    }
+
+    &-name {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #fff;
+        @include fontDetails (normal, 14px, 17px);
+        color: #6F6E6E;
+        font-family: inherit;
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+.filter-trigger:checked ~ .filter-content {
+    //display: block;
+    transform: scaleY(1);
+}
+
+.filter-trigger:not(:checked) ~ .filter-content {
+    //display: none;
+    transform: scaleY(0);
+}
+
+/* Filter's content End */
+
+.main-filters {
+    display: flex;
+}
+
+.sorting-option {
+    text-decoration: none;
+    @include fontDetails(normal, 14px, 17px);
+    color: #6F6E6E;
+    margin-right: 28px;
+
+    &-svg {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        color: black;
+    }
+}
+
+.sorting-option:hover .sorting-option-svg {
+    fill: black;
+}
+
+.sorter {
+    position: relative;
+
+    .sorting-trigger {
+        display: none;
+    }
+
+    &-content {
+        position: absolute;
+        z-index: 1;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-width: 79px;
+        min-height: 97px;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        padding: 7px 0 5px 9px;
+        margin: 5px 7px 0 0;
+    }
+
+    &-element {
+        font-family: Roboto;
+        @include fontDetails (normal, 14px, 16px);
+        color: #6F6E6E;
+
+    }
+
+    .sorter-trending-now {
+        left: 25px;
+    }
+
+    .sorter-size,
+    .sorter-price {
+        right: 7px;
+    }
+
+    .sorter-check {
+        margin: 0 9px 0 0;
+    }
+}
+
+.sorting-trigger:checked ~ .sorter-content {
+    display: flex;
+}
+
+.sorting-trigger:not(:checked) ~ .sorter-content {
+    display: none;
+}
+
+.catalog-pagination {
+    @include flexAllCenter;
+    width: 283px;
+    height: 43px;
+    margin: 18px auto 96px auto;
+    border: 1px solid #EBEBEB;
+    border-radius: 3px;
+    transition: 0.3s;
+
+    &:hover {
+        border: 1px solid #aaaaaa;
+    }
+}
+
+.page-number-style {
+    @include fontDetails(300, 16px, 19px);
+    color: #C4C4C4;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+.actual-page {
+    color: #EF5B70;
+
+    &:hover {
+        color: #ec3651;
+    }
+}
+
+.page-number-pos {
+    margin-right: 24px;
+}
+
+.pagination-arrow-left {
+    margin-right: 15px;
+}
+
+.pagination-arrow-right {
+    margin-left: 15px;
+}

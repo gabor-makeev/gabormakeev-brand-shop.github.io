@@ -1,0 +1,116 @@
+.featured-header {
+    text-align: center;
+
+    & h3 {
+        margin: 0 0 6px 0;
+        @include fontDetails(400, 30px, 36px);
+        color: $almostBlack;
+    }
+    
+    & p {
+        margin: 0 0 48px 0;
+        font-size: 14px;
+        line-height: 17px;
+        color: #9F9F9F;
+    }
+}
+
+.featured-items-position {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.featured-item {
+    width: 360px;
+    min-height: 581px;
+    background-color: #f8f8f8;
+    margin-bottom: 30px;
+    position: relative;
+    transition: 0.5s;
+
+    &-name {
+        font-size: 13px;
+        line-height: 16px;
+        color: $black;
+        margin: 22.35px 0 12.65px 18px;
+    }
+    
+    &-desc {
+        @include fontDetails(300, 14px, 17px);
+        color: #5D5D5D;
+        margin: 0 28.8px 18px 16.46px;
+    }
+    
+    &-price {
+        font-size: 16px;
+        line-height: 19px;
+        color: $pink;
+        margin-left: 18.41px;
+    }
+}
+
+.all-featured-products {
+    padding: 14px 38px 13px 38px;
+    border: 1px solid #FF6A6A;
+    text-decoration: none;
+    color: #F26376;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 18px auto 95px auto;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: $pink;
+        transform: scale(1.025);
+        color: #fff
+    }
+}
+
+/* Overlay */
+
+.featured-item-overlay {
+    @include flexAllCenter;
+    position: absolute;
+    height: 420px;
+    background-color: rgba(58, 56, 56, 0.83);
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.overlay-btn {
+    @include flexAllCenter;
+    height: 43px;
+    width: 138px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    transition: 0.3s;
+
+    &-svg {
+        margin: 13.29px 11.05px 8.73px 0;
+    }
+    
+    &-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: #FFFFFF;
+        margin: 16.23px 0 12.77px 0;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

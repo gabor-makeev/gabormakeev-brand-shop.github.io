@@ -1,0 +1,63 @@
+.header {
+    min-height: 75px;
+    background-color: $almostBlack;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-right {
+        margin: 8px 6px 0 0;
+        display: flex;
+        align-items: flex-end;
+    }
+
+
+    &-left {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &-logo {
+        margin-right: 31px;
+        transition: 0.2s;
+    }
+
+    &-cart {
+        margin-right: 3px;
+    }
+
+    &-search,
+    &-cart {
+        transition: 0.2s;
+    }
+
+    &-menu,
+    &-account {
+        margin-right: 33px;
+        transition: 0.2s;
+    }
+
+    &-menu {
+        cursor: pointer;
+        margin-bottom: 2px;
+        transition: 0.2s;
+    }
+
+
+
+    &-logo:hover,
+    &-search:hover,
+    &-menu:hover,
+    &-account:hover,
+    &-cart:hover {
+        transform: scale(1.1);
+    }
+}
