@@ -2027,7 +2027,7 @@ body {
     height: 368px;
     width: 368px;
     background-size: cover;
-    background: url(/img/promo_img_tablet.png) no-repeat;
+    background: url(../img/promo_img_tablet.png) no-repeat;
     margin-left: -32px;
   }
   .promo-title {
